@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html>
+<head>
+	<title>Add Movie</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{%static "css/movie.css"%}">
+
+
+</head>
+<body>
+	
+	<h1>Movie Information</h1>
+	{%if movie_list%}
+	<table>
+		<thead>
+			<th>Released Date</th>
+			<th>Movie Name</th>
+			<th>Hero</th>
+			<th>Heroin</th>
+			<th>Rating</th>
+		</thead>
+		{%for row in movie_list%}
+			<tr>
+				<td>{{row.rdate}}</td>
+				<td>{{row.moviename}}</td>
+				<td>{{row.hero}}</td>
+				<td>{{row.heroine}}</td>
+				<td>{{row.rating}}</td>
+				
+
+			</tr>
+		{%endfor%}
+	</table>
+
+	{%endif%}
+		
+	
+
+</body>
+</html>
